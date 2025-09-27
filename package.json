@@ -1,0 +1,19 @@
+{
+  "name": "nusachain-monorepo",
+  "version": "1.0.0",
+  "description": "DLT Monorepo for NusaChain",
+  "private": true,
+  "scripts": {
+    "dev:core": "pnpm --filter dlt-core-engine dev",
+    "dev:web": "pnpm --filter dlt-frontend-web dev",
+    "build:all": "pnpm --filter ./packages/* build",
+    "start:core": "pnpm --filter dlt-core-engine start"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "ts-node": "^10.9.2"
+  }
+}
